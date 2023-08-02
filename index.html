@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>YouTube-clone</title>
+    <link rel="stylesheet" href="youtube.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+    </head>
+    <body style="margin-top: 80px;
+    margin-left: 96px;
+    padding-right: 24px;
+    background-color: rgb(248, 248,248);
+    padding-bottom: 250px;" >
+        <div class="header">
+            <div class="left-section">
+                <img class="hamburger-menu"
+                src="https://supersimple.dev/public/img/exercises/youtube/icons/hamburger-menu.svg">
+                <img class="youtube-logo" src="https://supersimple.dev/public/img/exercises/youtube/icons/youtube-logo.svg">
+                </div>
+            <div class="middle-section">
+            <input class="search-bar" type="text" placeholder="Search">
+            <button>
+                <img class="search-button" src="https://supersimple.dev/public/img/exercises/youtube/icons/search.svg">
+            </button>
+            <button class="voice-icon">
+                <img class="voice-search-button" src="https://supersimple.dev/public/img/exercises/youtube/icons/voice-search-icon.svg">
+            </button>
+            </div>
+            <div class="right-section">       
+                    <img class="upload-icon" src="https://supersimple.dev/public/img/exercises/youtube/icons/upload.svg">
+                <img class="youtube-apps-icon"src="https://supersimple.dev/public/img/exercises/youtube/icons/youtube-apps.svg">
+               <div class="notification-cont">
+                <img class="notification-icon"src="https://supersimple.dev/public/img/exercises/youtube/icons/notifications.svg">
+               <div class="notification-count">6</div>   
+            </div> 
+                <img class="current-user-icon"src="https://yt3.ggpht.com/dMldZPLbZTazqQPkTpRg54q46Mon5Yem-jS1vMZ-He09g84CsGbuKb1J3JbfE8wp5y5s6mSXOA=s88-c-k-c0x00ffffff-no-rj-mo">
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="slidebar-link">
+                <img src="https://supersimple.dev/public/img/exercises/youtube/icons/home.svg">
+            <div>Home</div>
+            </div>
+            <div class="slidebar-link">
+                <img src="https://supersimple.dev/public/img/exercises/youtube/icons/explore.svg">
+            <div>Explore</div>
+            </div>
+            <div class="slidebar-link">
+                <img src="https://supersimple.dev/public/img/exercises/youtube/icons/subscriptions.svg">
+            <div>Subscriptions</div>
+            </div>
+            <div class="slidebar-link">
+              <img src="https://supersimple.dev/public/img/exercises/youtube/icons/originals.svg"> 
+            <div>Originals</div>
+            </div>
+            <div class="slidebar-link">
+                <img src="https://supersimple.dev/public/img/exercises/youtube/icons/youtube-music.svg">
+            <div>YouTube Music</div>
+            </div>
+            <div class="slidebar-link">
+               <img src="https://supersimple.dev/public/img/exercises/youtube/icons/library.svg">  
+            <div>Library</div>
+            </div>
+        </div>
+        <div class="video-grid">
+            <div class="video-container">
+                <div class="video-thumbnail">
+                    <img class="thumbnail"
+                        src="data:image/jpeg;base64,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">
+                        <div class="video-timer">11:12</div>
+                </div>
+                <div class="video-info">
+                    <div class="channel-profile">
+                        <img class="profile"
+                            src="https://tse3.mm.bing.net/th?id=OVT1.GTwWn1e6BOsMdHyioDpK_A&w=40&h=40&c=7&rs=1&qlt=90&p=0&o=5&pid=VidF">
+                    </div>
+                    <div class="video-states">
+                        <p><strong> Vision Pro First Impression!</strong></p>
+                      <div class="youtube-stat">
+                        <p style="color: grey;
+                        font-weight: 500;
+                        font-size: 12px;
+                        margin-bottom: 0px;">Marques Brownlee</p>
+                        <p style="color: grey;
+                        font-weight: 500;
+                        font-size: 12px;">4.1M views · 1 dayago</p>
+                      </div> 
+                    </div>
+        
+                </div>
+            </div>   
+            <div class="video-container">
+                <div class="video-thumbnail">
+                    <img class="thumbnail"
+                        src="https://i.ytimg.com/vi/iq5MaiXAUog/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDEKe1vSotr0uHM9tgLBQ38bswTNg">
+                        <div class="video-timer">0:33</div>
+                    </div>
+                <div class=" video-info">
+                    <div class="channel-profile">
+                        <img class="profile-apple"
+                            src="https://yt3.ggpht.com/ytc/AGIKgqPjNrlFDFxI6JAkfICh_kGVjjxZj1TtBT7gTiD3EA=s48-c-k-c0x00ffffff-no-rj">
+                    </div>
+                    <div class="video-states">
+                        <p><strong> Naa Ready Promo Thalapathy Vijay</strong></p>
+                        <p style="color: grey;
+                        font-weight: 500;
+                        font-size: 12px;">Sony Music South</p>
+                        <p style="color: grey;
+                        font-weight: 500;
+                        font-size: 12px;">8.6M views · 2 dayago</p>
+                    </div>
+        
+                </div>
+            </div>
+            <div class="video-container">
+                <div class="video-thumbnail">
+                    <img class="thumbnail"
+                        src="https://i.ytimg.com/vi/k5gK_NZX0-8/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDldzEiVIBuoy0OSWT_sY8y_V_fdA" alt="">
+                        <div class="video-timer">9:39</div>   
+                    </div>
+                <div class=" video-info">
+                    <div class="channel-profile">
+                        <img class="profile-apple"
+                            src="https://yt3.googleusercontent.com/ytc/AGIKgqNflasKjTAKwQTPPqqPqUVHwUWY_i3nBjhCxvZd=s176-c-k-c0x00ffffff-no-rj-mo">
+                    </div>
+                    <div class="video-states">
+                        <p><strong>ஐந்தாம் பரிமாணம் REALLY?</strong></p>
+                        <p style="color: grey;
+                        font-weight: 500;
+                        font-size: 12px;">Un Signed</p>
+                        <p style="color: grey;
+                        font-weight: 500;
+                        font-size: 12px;">66k views · 2 days ago</p>
+                    </div>
+        
+                </div>
+            </div>
+            <div class="video-container">
+                <div class="video-thumbnail">
+                    <img class="thumbnail"
+                        src="https://i.ytimg.com/vi/TmcEmsyYKXE/hq720.jpg?sqp=-oaymwEjCOgCEMoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAteVjo3psq1BEhMR9WXMj1b3WFrQ" alt="">
+                        <div class="video-timer">12.00:39</div>
+                     </div>
+                <div class=" video-info">
+                    <div class="channel-profile">
+                        <img class="profile-apple"
+                            src="https://yt3.googleusercontent.com/ytc/AGIKgqOwoeDhHgV6Hi-bzWr8S43mH3TAihwZbXCyruoC=s176-c-k-c0x00ffffff-no-rj-mo"
+                            alt="">
+                    </div>
+                    <div class="video-states">
+                        <p><strong>Full Course (2023) Beginner to Pro</strong> </p>
+                        <p style="color: grey;
+                        font-weight: 500;
+                        font-size: 12px;">SuperSimpleDev</p>
+                        <p style="color: grey;
+                        font-weight: 500;
+                        font-size: 12px;">7lakh views · 1 month ago</p>
+                    </div>
+        
+                </div>
+            </div>
+            <div class="video-container">
+                <div class="video-thumbnail">
+                    <img class="thumbnail"
+                        src="https://i.ytimg.com/vi/0okuAwqTHs0/hq720.jpg?sqp=-oaymwEjCOgCEMoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDEFFTepLkyPcfn73OldcX_DlSj-w" alt="">
+                        <div class="video-timer">12:00</div>
+                    </div>
+                <div class=" video-info">
+                    <div class="channel-profile">
+                        <img class="profile-apple"
+                            src="https://th.bing.com/th/id/OIP.p4xAbkrZX2i9iwFFgu8-zgHaHa?w=179&h=180&c=7&r=0&o=5&pid=1.7"
+                            alt="">
+                    </div>
+                    <div class="video-states">
+                        <p><strong>Apple MacBook Air 15"</strong></p>
+                        <p style="color: grey;
+                        font-weight: 500;
+                        font-size: 12px;">Apple</p>
+                        <p style="color: grey;
+                        font-weight: 500;
+                        font-size: 12px;">5M views · 2 dayago</p>
+                    </div>
+        
+                </div>
+            </div>
+            <div class="video-container">
+                <div class="video-thumbnail">
+                    <img class="thumbnail"
+                        src="https://i.ytimg.com/vi/ychcXiksQqI/hq720.jpg?sqp=-oaymwEjCOgCEMoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCi9hL9HyFjg52Sc1BXiGasAo7E_A" alt="">
+                        <div class="video-timer">8:56</div>
+                    </div>
+                <div class=" video-info">
+                    <div class="channel-profile">
+                        <img class="profile-apple"
+                            src="https://yt3.googleusercontent.com/ytc/AGIKgqMos0SNaTwPvJwYJjq7eq6FeT-jgEBA1LkJ_KJ0=s176-c-k-c0x00ffffff-no-rj"
+                            alt="">
+                    </div>
+                    <div class="video-states">
+                        <p><strong> SEEING MY MERCEDES SLR!</strong></p>
+                        <p style="color: grey;
+                        font-weight: 500;
+                        font-size: 12px;">Manny Khoshbin</p>
+                        <p style="color: grey;
+                        font-weight: 500;
+                        font-size: 12px;">3.5 lakh views · 9 day ago</p>
+                    </div>
+                </div>
+            </div>
+            <div class="video-container">
+                <div class="video-thumbnail">
+                    <img class="thumbnail"
+                        src="https://i.ytimg.com/vi/BGvamNku3-o/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCQhoIvdtCtG10hjcTbMOzOtG2qbQ">
+                        <div class="video-timer">15:02</div>   
+                    </div>
+                <div class=" video-info">
+                    <div class="channel-profile">
+                        <img class="profile-apple"
+                            src="https://yt3.ggpht.com/MeY_fGNrjVLV0PVOBN7dRWzMBS0y41YGm55LOaJ02cXV82a7Np9pYxxhHFqdYdncEy1I2cYR=s48-c-k-c0x00ffffff-no-rj">
+                    </div>
+                    <div class="video-states">
+                        <p><strong>Is AI Killing Web Development?</strong></p>
+                        <p style="color: grey;
+                        font-weight: 500;
+                        font-size: 12px;">Harkirat Singh</p>
+                        <p style="color: grey;
+                        font-weight: 500;
+                        font-size: 12px;">100k views · 4 days ago</p>
+                    </div>
+        
+                </div>
+            </div>
+            <div class="video-container">
+                <div class="video-thumbnail">
+                    <img class="thumbnail"
+                        src="https://i.ytimg.com/vi/EnYhN_d2zgU/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCRvUAIJVeRaEqeDOZkmMNAevR9UQ">
+                        <div class="video-timer">7:15</div>   
+                    </div>
+                <div class=" video-info">
+                    <div class="channel-profile">
+                        <img class="profile-apple"
+                            src="https://yt3.ggpht.com/CDiMODBTtP-gp5EJFnjwaPwioYhkPw0HLsghWllsP0BprNtQAhK0b6FqGelMasNLvVUTdWZSeg=s48-c-k-c0x00ffffff-no-rj"
+                            alt="">
+                    </div>
+                    <div class="video-states">
+                        <p><strong>Quasi-Star Largest Star Ever ?</strong></p>
+                        <p style="color: grey;
+                        font-weight: 500;
+                        font-size: 12px;
+                        ">Mr.GK</p>
+                        <p style="color: grey;
+                        font-weight: 500;
+                        font-size: 12px;">200k views · 1 months ago</p>
+                    </div>
+        
+             
+                </div>    
+            </div>
+            <div class="video-container">
+                <div class="video-thumbnail">
+                    <img class="thumbnail"
+                        src="https://i.ytimg.com/vi/q6zhos-TcNA/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBGGqHagTSrkfS8ntlbOPX0-f2E7g" alt="">
+                        <div class="video-timer">1:05:23</div>   
+                    </div>
+                <div class=" video-info">
+                    <div class="channel-profile">
+                        <img class="profile-apple"
+                            src="https://yt3.googleusercontent.com/ytc/AGIKgqNgLDkbHtr8VdWDsmoBbemrD0gg7wx6rGITJsdR=s176-c-k-c0x00ffffff-no-rj-mo"
+                            alt="">
+                    </div>
+                    <div class="video-states">
+                        <p><strong>URUTTU TECH(2023) Full Movie</strong></p>
+                        <p style="color: grey;
+                        font-weight: 500;
+                        font-size: 12px;">A2D Channel</p>
+                        <p style="color: grey;
+                        font-weight: 500;
+                        font-size: 12px;">890K views · 2days ago</p>
+                    </div>
+        
+                </div>
+            </div>
+            <div class="video-container">
+                <div class="video-thumbnail">
+                    <img class="thumbnail"
+                        src="https://i.ytimg.com/vi/tOFcYOmOvBk/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAFer5u-VCW0KBMksYdCyDDOo6GTQ">
+                        <div class="video-timer">16:41</div>
+                    </div>
+                <div class=" video-info">
+                    <div class="channel-profile">
+                        <img class="profile-apple"
+                            src="https://yt3.ggpht.com/ytc/AGIKgqM8yC79AohYokFqarhfS51ixVpyfkfIlW0n00-2=s48-c-k-c0x00ffffff-no-rj"
+                            alt="">
+                    </div>
+                    <div class="video-states">
+                        <p><strong>Yamaha YZF-R1M Scale Model</strong></p>
+                        <p style="color: grey;
+                        font-weight: 500;
+                        font-size: 12px;">kota scale model</p>
+                        <p style="color: grey;
+                        font-weight: 500;
+                        font-size: 12px;">4.4M views · 1 year ago</p>
+                    </div>
+        
+                </div>
+            </div>
+            <div class="video-container">
+                <div class="video-thumbnail">
+                    <img class="thumbnail"
+                        src="https://i.ytimg.com/vi/RctKyA1kevU/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBNxRuqK0n9g9HolJ_vw2hCwu4wbg">
+                        <div class="video-timer">15:43</div>   
+                    </div>
+                <div class=" video-info">
+                    <div class="channel-profile">
+                        <img class="profile-apple"
+                            src="https://yt3.ggpht.com/ytc/AGIKgqPvh3ov1CGnrt9i801pgzN1gIUPa5Fjcjkio3mmEA=s68-c-k-c0x00ffffff-no-rj">
+                    </div>
+                    <div class="video-states">
+                        <p><strong>A2D URUTTU Channel Exposed ⚠️</strong></p>
+                        <p style="color: grey;
+                        font-weight: 500;
+                        font-size: 12px;">Tamil Tech</p>
+                        <p style="color: grey;
+                        font-weight: 500;
+                        font-size: 12px;">329k views · 3days ago</p>
+                    </div>
+        
+                </div>
+            </div>
+            <div class="video-container">
+                <div class="video-thumbnail">
+                    <img class="thumbnail"
+                        src="https://th.bing.com/th/id/OIP.LYfteDm52_sQGaOA-hwmYwHaEK?w=331&h=186&c=7&r=0&o=5&pid=1.7">
+                        <div class="video-timer">10:56</div>   
+                    </div>
+                <div class=" video-info">
+                    <div class="channel-profile">
+                        <img class="profile-apple"
+                            src="https://yt3.ggpht.com/ytc/AGIKgqNMLU-QGM-Fyi7LNm05QIqQywc7XyqUrT2X_pt4Sg=s48-c-k-c0x00ffffff-no-rj">
+                    </div>
+                    <div class="video-states">
+                        <p><strong>Huracan STO v Aventador SVJ</strong></p>
+                        <p style="color: grey;
+                        font-weight: 500;
+                        font-size: 12px;">carwow</p>
+                        <p style="color: grey;
+                        font-weight: 500;
+                        font-size: 12px;">250k views · 1year ago</p>
+                    </div>
+        
+                </div>    
+        </div>
+    </body>
+</html>
